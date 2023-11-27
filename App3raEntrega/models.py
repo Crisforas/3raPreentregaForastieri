@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Liga(models.Model):
     nombre = models.CharField(max_length=40)
-    pais = models.CharField(max_length=30)
+    pais = models.IntegerField(unique=True)
 
     def __str__(self):
         return f"Liga: {self.nombre}, Pais: {self.pais}"
@@ -11,7 +11,7 @@ class Liga(models.Model):
 class Club(models.Model):
     nombre = models.CharField(max_length=40)
     division = models.CharField(max_length=30)
-    pais = models.CharField(max_length=30)
+    pais = models.IntegerField(unique=True)
 
     def __str__(self):
         return  f"Nombre: {self.nombre}, Division: {self.division}, Pais: {self.pais}"
