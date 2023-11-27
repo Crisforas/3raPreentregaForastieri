@@ -9,5 +9,5 @@ def ingresar_club(request):
     club = Club(nombre="BocaJrs", division="Primera_A", pais="Argentina")
     club.save()
 
-    return HttpResponse(f"{club.nombre}es el mas grande de )
+    return HttpResponse(f"{club.nombre} es el mas grande de Argentina")
 
