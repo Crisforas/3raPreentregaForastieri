@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block cambio%}
+    {% for paciente in pacientes %}
+        <h6>El paciente es {{Lista_Paciente.nombre}}{{Lista_Paciente.apellido}} y tiene {{Lista_Paciente.edad}} anios</h6>
+
+    {% endfor %}
+
+{% endblock %}

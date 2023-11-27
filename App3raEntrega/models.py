@@ -1,31 +1,33 @@
 from django.db import models
 
 # Create your models here.
-class Liga(models.Model):
-    nombre = models.CharField(max_length=40)
-    pais = models.IntegerField(unique=True)
+class Lista_Paciente(models.Model):
+    nombre = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
+    edad = models.IntegerField(int)
+    email = models.EmailField(max_length=40, unique=True)
 
     def __str__(self):
-        return f"Liga: {self.nombre}, Pais: {self.pais}"
+        return f"Nombre: {self.nombre}, Apellido: {self.pais}, Edad: {self.edad}, Email: {self.email}"
 
-class Club(models.Model):
-    nombre = models.CharField(max_length=40)
-    division = models.CharField(max_length=30)
-    pais = models.IntegerField(unique=True)
-
-    def __str__(self):
-        return  f"Nombre: {self.nombre}, Division: {self.division}, Pais: {self.pais}"
-
-
-class Jugador(models.Model):
-    nombre = models.CharField(max_length=40)
-    apellido = models.CharField(max_length=40)
-    nacionalidad = models.CharField(max_length=30)
-    edad = models.IntegerField()
-    posicion = models.CharField(max_length=20)
+class Consumible(models.Model):
+    nombre = models.CharField(max_length=40, unique=True)
+    marca = models.CharField(max_length=30)
+    modelo = models.CharField(max_length=30)
+    cantidad = models.IntegerField(int)
 
     def __str__(self):
-        return f"Nombre: {self.nombre}, Apellido: {self.apellido}, Nacionalidad: {self.nacionalidad}, Edad: {self.edad}, Posiscion: {self.posicion}"
+        return  f"Nombre: {self.nombre}, Marca: {self.marca}, Modelo: {self.modelo}, Cantidad: {self.cantidad}"
+
+
+class Servicio(models.Model):
+    paciente = models.CharField(max_length=40)
+    trabajo = models.CharField(max_length=40)
+    precio = models.IntegerField(int)
+
+
+    def __str__(self):
+        return f"Paciente: {self.ortodoncia}, Trabajo: {self.trabajo}, Precio: {self.precio}"
 
 
 
