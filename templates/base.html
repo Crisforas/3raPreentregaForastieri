@@ -18,15 +18,7 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!">Inicio</a>
-                <a class="navbar-brand" href="#!">Pacientes</a>
-                <a class="navbar-brand" href="#!">Consumibles</a>
-                <a class="navbar-brand" href="#!">Trabajos</a>
-                <a class="btn btn-primary" href="#signup">{{nombre}}</a>
-            </div>
-        </nav>
+        {% include 'base/navigation.html' %}
 <!--        custom-->
         {% block cambio %}
 

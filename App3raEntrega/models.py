@@ -8,7 +8,7 @@ class Lista_Paciente(models.Model):
     email = models.EmailField(max_length=40, unique=True)
 
     def __str__(self):
-        return f"Nombre: {self.nombre}, Apellido: {self.pais}, Edad: {self.edad}, Email: {self.email}"
+        return f"Nombre: {self.nombre}, Apellido: {self.apellido}, Edad: {self.edad}, Email: {self.email}"
 
 class Consumible(models.Model):
     nombre = models.CharField(max_length=40, unique=True)

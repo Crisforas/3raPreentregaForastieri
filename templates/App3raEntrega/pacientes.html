@@ -2,8 +2,11 @@
 
 {% block cambio%}
     {% for paciente in pacientes %}
-        <h6>El paciente es {{Lista_Paciente.nombre}}{{Lista_Paciente.apellido}} y tiene {{Lista_Paciente.edad}} anios</h6>
-
+        <h2>El paciente es {{Lista_Paciente.nombre}}{{Lista_Paciente.apellido}}</h2>
+        <p class="lead mb-0">
+              Tiene {{Lista_Paciente.edad}} anios
+        </p>
+        <hr>
     {% endfor %}
 
 {% endblock %}
